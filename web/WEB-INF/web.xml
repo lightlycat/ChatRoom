@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_3_1.xsd"
+         version="3.1">
+    <welcome-file-list>
+
+        <welcome-file>login.jsp</welcome-file>
+    </welcome-file-list>
+    <servlet>
+        <description>Login - jQuery Ajax Request</description>
+        <display-name>UserLogin</display-name>
+        <servlet-name>UserLogin</servlet-name>
+        <servlet-class>clu.agile.Dispatch.Login</servlet-class>
+    </servlet>
+    <servlet>
+        <description>User SignUp</description>
+        <display-name>UserSignUp</display-name>
+        <servlet-name>UserSignUp</servlet-name>
+        <servlet-class>clu.agile.Dispatch.SignUp</servlet-class>
+    </servlet>
+    <servlet>
+        <description>Chat Room</description>
+        <display-name>Chat</display-name>
+        <servlet-name>Chat</servlet-name>
+        <servlet-class>clu.agile.chatApp.CLUChatServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserLogin</servlet-name>
+        <url-pattern>/UserLogin</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>UserSignUp</servlet-name>
+        <url-pattern>/SignUp</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>Chat</servlet-name>
+        <url-pattern>/Chat</url-pattern>
+    </servlet-mapping>
+</web-app>
